@@ -330,11 +330,11 @@ header {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 51rem;
+  height: 52rem;
 }
 
 .card__side {
-  height: 31rem;
+  height: 52rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -376,10 +376,10 @@ header {
 
 .card__picture {
   background-size: cover;
-  height: 10rem;
+  height: 23rem;
   background-blend-mode: screen;
-  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 .card__picture--1 {
@@ -401,10 +401,10 @@ header {
   font-size: 2.8rem;
   font-weight: 300;
   text-transform: uppercase;
-  text-align: center;
+  text-align: right;
   color: #fff;
   position: absolute;
-  top: -2rem;
+  top: 12rem;
   right: 2rem;
   width: 75%;
 }
@@ -443,20 +443,19 @@ header {
   font-size: 10px;
   color: #777777;
   font-family: "Lato", sans-serif;
-  padding: 2.5rem;
+  padding: 3rem;
 }
 
 .card__details ul {
   list-style: none;
   widows: 80%;
   margin: 0 auto;
-  padding-left: 0;
 }
 
 .card__details ul li {
   text-align: center;
   font-size: 1.5rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .card__details ul li:not(:last-child) {
@@ -486,7 +485,6 @@ header {
 .card__price-value {
   font-size: 6rem;
   font-weight: 100;
-  margin: 1rem 1rem;
 }
 
 .btn,
