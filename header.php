@@ -35,10 +35,10 @@
                 <div class="col-2-of-3">
                     <div class="MainMenu">
                         <a href="main.php" class="MainMenu MainMenu--MenuItem">HomePage</a>
-                        <a href="tours.html" class="MainMenu MainMenu--MenuItem">Tours</a>
+                        <a href="tours.php" class="MainMenu MainMenu--MenuItem">Tours</a>
                         <a href="booking.php" class="MainMenu MainMenu--MenuItem">Booking</a>
                         <a href="#" class="MainMenu MainMenu--MenuItem">Portfolio</a>
-                        <a href="gallery.html" class="MainMenu MainMenu--MenuItem">Gallery</a>
+                        <a href="gallery.php" class="MainMenu MainMenu--MenuItem">Gallery</a>
                         <a href="#" class="MainMenu MainMenu--MenuItem">DropDown</a>
                     </div>
                 </div>
