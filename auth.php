@@ -11,63 +11,7 @@
 </head>
 
 <body>
-  <header>
-    <!-- <div class="container"> -->
-    <div class="icons">
-      <a href="https://www.linkedin.com/" target="”_blank”" class="icon icon--linkedin"></a>
-      <a href="https://www.twitter.com/" target="”_blank”" class="icon icon--twitter"></a>
-      <a href="https://www.pinterest.com/" target="”_blank”" class="icon icon--pinterest"></a>
-      <a href="https://www.google.com/" target="”_blank”" class="icon icon--google-plus"></a>
-      <a href="https://rss.app/" target="”_blank”" class="icon icon--rss"></a>
-    </div>
-    <div class="title">
-      <h1 class="title title--text">
-        concomitant
-      </h1>
-
-      <ul class="menuItem">
-        <li class="menuItem menuItem--item">
-          Free PSD Website Template
-        </li>
-
-        <li class="menuItem menuItem--item">
-          <a id="signup" href="auth.html">Sign Up</a>
-          <a id="login" href="auth.html">Login</a>
-          <a href="#">RSS Feeds</a>
-          <a href="#">Archived News</a>
-        </li>
-      </ul>
-    </div>
-    <!-- </div> -->
-  </header>
-
-  <nav class="MenuFrame">
-    <div class="container1">
-      <div class="menu">
-        <div class="container">
-          <div class="row">
-            <div class="col-2-of-3">
-              <div class="MainMenu">
-                <a href="main.html" class="MainMenu MainMenu--MenuItem">HomePage</a>
-                <a href="tours.html" class="MainMenu MainMenu--MenuItem">Tours</a>
-                <a href="booking.html" class="MainMenu MainMenu--MenuItem">Booking</a>
-                <a href="#" class="MainMenu MainMenu--MenuItem">Portfolio</a>
-                <a href="gallery.html" class="MainMenu MainMenu--MenuItem">Gallery</a>
-                <a href="#" class="MainMenu MainMenu--MenuItem">DropDown</a>
-              </div>
-            </div>
-            <div class="col-1-of-3">
-              <form class="b-search-form b-menu__search-form">
-                <input class="b-search-form__input" type="text" placeholder="Search our website..." />
-                <input class="b-search-form__input b-search-form__input_button" type="submit" value="Search" />
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
+  <?php include 'header.php'; ?>
   <!-- Login -->
 
   <section class="section-login">
