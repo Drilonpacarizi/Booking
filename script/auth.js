@@ -1,8 +1,14 @@
 var checked = true;
 
 function checkLogin() {
+  // var btn = document.getElementById("logsign")
+  // btn.name = "login_user";
   if (checked) {
     var x = document.getElementById("fullname");
+    var small = document.getElementById("small");
+    small.checked = true;
+    x.required = false;
+
     if (x.style.display === "none") {
       x.style.display = "block";
     } else {
@@ -13,8 +19,11 @@ function checkLogin() {
 }
 
 function checkSignup() {
+  // var btn = document.getElementById("logsign")
+  // btn.name = "signup";
   if (!checked) {
     var x = document.getElementById("fullname");
+    x.required = true;
     if (x.style.display === "block") {
       x.style.display = "none";
     } else {
@@ -97,11 +106,6 @@ function signUp() {
   let em = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
   let p = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 
-  console.log(em.test("jahiriflamur@gmail.com"));
-  console.log(em.exec("drilonapa@gmail"));
-  console.log(p.test("TrimMuharremi"));
-  console.log(p.exec("TrimMuharremi1"));
-
   if (!password.match(p)) {
     alert("Password should be 6-20 chars , have : A-Z , a-z , 1-9");
     return;
@@ -117,13 +121,33 @@ function signUp() {
   alert("Succesfully Registred ! ");
   checkLogin();
 }
+function user_exist() {
+  document.getElementById("incorrect").innerHTML = "This e-mail is used earlier";
+  document.getElementById("incorrect").style.color = "red";
+}
 
+function incorrect_email_password() {
+  document.getElementById("incorrect").innerHTML = "Password is incorrect";
+  document.getElementById("incorrect").style.color = "red";
+}
 function checkWhich() {
-  if (!checked) {
-    logIn();
-    checkLogin();
-  } else {
-    signUp();
-    returnDefault();
-  }
+  // var btn = document.getElementById("logsign")
+
+  // console.log(btn.name+"sas");
+  // if (!checked) {
+  //   document.getElementById("myForm").action = "/login.php";
+  //   logIn();
+  //   checkLogin();
+  // } else {
+  //   signUp();
+  //   returnDefault();
+  // }
+}
+
+function signupSuccess() {
+  alert("Your have been registred");
+}
+
+function logginSuccess() {
+  location.href = "http://localhost/booking//main.php";
 }
