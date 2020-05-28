@@ -15,6 +15,8 @@
   include 'header.php';
   function login()
   {
+    try {
+    
     $email = $GLOBALS['email'];
     $conn = $GLOBALS['conn'];
     $password = $GLOBALS['password'];
@@ -47,10 +49,17 @@
     if (!$retval) {
       die("Nuk mund te shtohen te dhenat " . mysqli_connect_error());
     }
+      
+  } catch (\Throwable $th) {
+    var_dump($th);
+  }
   }
 
   function signup()
   {
+    try {
+      
+    
     $conn = $GLOBALS['conn'];
 
     $email = $GLOBALS['email'];
@@ -85,6 +94,9 @@
     if (!$retval) {
       die("Nuk mund te shtohen te dhenat " . mysqli_connect_error());
     }
+  } catch (\Throwable $th) {
+    var_dump($th);
+  }
   }
   if (isset($_POST['signup']) || isset($_POST['login_user'])) {
     $dbhost = 'localhost:3306';

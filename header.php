@@ -2,6 +2,7 @@
 session_start();
 include "session.php";
 $obj =  new Session();
+
 ?>
 <header>
     <!-- <div class="container"> -->
@@ -14,12 +15,12 @@ $obj =  new Session();
     </div>
     <div class="title">
         <h1 class="title title--text">
-            concomitant
+            Booking
         </h1>
 
         <ul class="menuItem">
             <li class="menuItem menuItem--item">
-                Free PSD Website Template
+                Book all kinds of tours
             </li>
 
             <li class="menuItem menuItem--item">
@@ -54,7 +55,7 @@ $obj =  new Session();
                             $my_booking = '<a href="mybooking.php" class="MainMenu MainMenu--MenuItem">My Bookings</a>';
                         }
                         echo $my_booking;
-                        ?> <a href="gallery.php" class="MainMenu MainMenu--MenuItem">Gallery</a>
+                        ?> <a href="gallery.php" class="MainMenu MainMenu--MenuItem">Stories</a>
                     </div>
                 </div>
                 <div class="col-1-of-3">

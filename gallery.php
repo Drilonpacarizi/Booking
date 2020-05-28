@@ -13,11 +13,7 @@
   <?php include 'header.php'; ?>
 
   <section class="section-stories">
-    <audio controls autoplay hidden>
-      <source src="img/wave.ogg" type="audio/ogg" />
-      <source src="img/wave.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
+    
     <div class="bg-video">
       <video class="bg-video__content" autoplay muted loop>
         <source src="img/video.mp4" type="video/mp4" />

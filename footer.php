@@ -2,7 +2,7 @@
   <footer id="footer-section" style>
     <div class="container">
       <div class="row">
-        <div class="col-1-of-4">
+        <div class="col-1-of-2">
           <div class="footer-container">
             <div class="footer-header">
               <h2>Contact Details</h2>
@@ -18,7 +18,7 @@
             </address>
           </div>
         </div>
-        <div class="col-1-of-4">
+        <div class="col-1-of-2">
           <div class="footer-container">
             <div class="footer-header">
               <h2>Quick Links</h2>
@@ -49,7 +49,7 @@
             <a href="#">Read More »</a>
           </div> -->
         <!-- </div> -->
-        <div class="col-1-of-4">
+        <!-- <div class="col-1-of-4">
           <div class="footer-container">
             <div class="footer-header">
               <h2>Grab our newsletter</h2>
@@ -60,7 +60,7 @@
               <input type="submit" value="Submit" class="form-submit" />
             </form>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
@@ -68,9 +68,9 @@
     <div class="container">
       <div class="about-me">
         <p>
-          Copyright &copy 2013 - All Rights Reserved - Domain Name
+          Copyright &copy 2020
         </p>
-        <p>Template by OS Templates</p>
+        <p></p>
       </div>
     </div>
   </footer>
