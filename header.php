@@ -1,31 +1,7 @@
 <?php
 session_start();
-
-function isLogin()
-{
-    $result  = false;
-    if (isset($_COOKIE['is_login']) && $_COOKIE['is_login']) {
-        $result = true;
-    }
-    return $result;
-}
-
-function idExpire()
-{
-    $result = false;
-    if (isset($_SESSION['expire']) && (time() - $_SESSION['expire']) > 0) {
-        $result = true;
-    }
-    return $result;
-}
-function getId()
-{
-    $result = 0;
-    if (isset($_SESSION['id'])) {
-        $result = (int) $_SESSION['id'];
-    }
-    return $result;
-}
+include "session.php";
+$obj =  new Session();
 ?>
 <header>
     <!-- <div class="container"> -->
@@ -33,8 +9,7 @@ function getId()
         <a href="https://www.linkedin.com/" target="”_blank”" class="icon icon--linkedin"></a>
         <a href="https://www.twitter.com/" target="”_blank”" class="icon icon--twitter"></a>
         <a href="https://www.pinterest.com/" target="”_blank”" class="icon icon--pinterest"></a>
-        <a href="mailto:drilonpa@gmail.com?subject = Feedback&body = Message" target="”_blank”"
-            class="icon icon--google-plus"></a>
+        <a href="mailto:drilonpa@gmail.com?subject = Feedback&body = Message" target="”_blank”" class="icon icon--google-plus"></a>
         <a href="https://rss.app/" target="”_blank”" class="icon icon--rss"></a>
     </div>
     <div class="title">
@@ -50,7 +25,7 @@ function getId()
             <li class="menuItem menuItem--item">
                 <?php
                 $login = '';
-                if (!isLogin()||idExpire()) {
+                if (!$obj->isLogin() || $obj->idExpire()) {
                     $login = '<a id="login" href="auth.php">Login</a>';
                 } else {
                     $login = '<a id="login" href="logout.php">Logout</a>';
@@ -72,17 +47,21 @@ function getId()
                         <a href="main.php" class="MainMenu MainMenu--MenuItem">HomePage</a>
                         <a href="tours.php" class="MainMenu MainMenu--MenuItem">Tours</a>
                         <a href="booking.php" class="MainMenu MainMenu--MenuItem">Booking</a>
-                        <a href="mybooking.php" class="MainMenu MainMenu--MenuItem">My Bookings</a>
-                        <a href="gallery.php" class="MainMenu MainMenu--MenuItem">Gallery</a>
+                        <?php
+                        if (!$obj->isLogin() || $obj->idExpire()) {
+                            $my_booking = '';
+                        } else {
+                            $my_booking = '<a href="mybooking.php" class="MainMenu MainMenu--MenuItem">My Bookings</a>';
+                        }
+                        echo $my_booking;
+                        ?> <a href="gallery.php" class="MainMenu MainMenu--MenuItem">Gallery</a>
                         <a href="#" class="MainMenu MainMenu--MenuItem">DropDown</a>
                     </div>
                 </div>
                 <div class="col-1-of-3">
                     <form method="post" action="booking.php" class="b-search-form b-menu__search-form">
-                        <input class="b-search-form__input" name="search_input" id="search_input" required type="text"
-                            placeholder="Search our website..." />
-                        <input class="b-search-form__input b-search-form__input_button" type="submit" name="search"
-                            id="search" value="Search" />
+                        <input class="b-search-form__input" name="search_input" id="search_input" required type="text" placeholder="Search our website..." />
+                        <input class="b-search-form__input b-search-form__input_button" type="submit" name="search" id="search" value="Search" />
                     </form>
                 </div>
             </div>

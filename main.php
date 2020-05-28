@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style/main.css" />
   <link rel="stylesheet" href="style/homepagecard.css" />
   <title>Concomitant</title>
-  <script src="script/main.js"></script>
+  <script src="script/booking_item.js"></script>
 </head>
 
 <body>
@@ -156,10 +156,10 @@
       <?php
       if (isset($_POST['book_now'])) {
         $id = $_POST['book_id'];
-        if (!isLogin() || idExpire()) {
+        if (!$obj->isLogin() || $obj->idExpire()) {
           echo  "<script> user_not_login();</script>";
         } else {
-          $result = setBooking($id, getId());
+          $result = setBooking($id, $obj->getId());
           if ($result) {
             echo  "<script> success_booking();</script>";
           } else {
@@ -239,6 +239,7 @@
   </section>
   <?php include 'footer.php'; ?>
 </body>
+<script src="script/main.js"></script>
 <script src="script/check.js"></script>
 
 </html>

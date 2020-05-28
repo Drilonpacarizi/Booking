@@ -7,16 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Document</title>
   <link rel="stylesheet" href="style/auth.css" />
-  <script src="script/auth.js"></script>
 </head>
 
 <body>
+  <script src="script/auth.js"></script>
   <?php
-  // session_start();
   include 'header.php';
-  ?>
-  <?php
-
   function login()
   {
     $email = $GLOBALS['email'];
@@ -41,11 +37,11 @@
 
         echo "<script> logginSuccess();</script>";
       } else {
-        echo "<script> incorrect_email_password();checkLogin();</script>";
+        echo "<script> incorrect_email_password();</script>";
         return;
       }
     } else {
-      echo "<script> incorrect_email_password();checkLogin();</script>";
+      echo "<script> incorrect_email_password();</script>";
       return;
     }
     if (!$retval) {

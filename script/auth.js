@@ -128,6 +128,7 @@ function user_exist() {
 }
 
 function incorrect_email_password() {
+  checkLogin();
   document.getElementById("incorrect").innerHTML = "Password is incorrect";
   document.getElementById("incorrect").style.color = "red";
 }
