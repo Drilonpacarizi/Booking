@@ -1,3 +1,32 @@
+<?php
+session_start();
+
+function isLogin()
+{
+    $result  = false;
+    if (isset($_COOKIE['is_login']) && $_COOKIE['is_login']) {
+        $result = true;
+    }
+    return $result;
+}
+
+function idExpire()
+{
+    $result = false;
+    if (isset($_SESSION['expire']) && (time() - $_SESSION['expire']) > 0) {
+        $result = true;
+    }
+    return $result;
+}
+function getId()
+{
+    $result = 0;
+    if (isset($_SESSION['id'])) {
+        $result = (int) $_SESSION['id'];
+    }
+    return $result;
+}
+?>
 <header>
     <!-- <div class="container"> -->
     <div class="icons">
@@ -19,10 +48,15 @@
             </li>
 
             <li class="menuItem menuItem--item">
-                <a id="signup" href="auth.php">Sign Up</a>
-                <a id="login" href="auth.php">Login</a>
-                <a href="#">RSS Feeds</a>
-                <a href="#">Archived News</a>
+                <?php
+                $login = '';
+                if (!isLogin()||idExpire()) {
+                    $login = '<a id="login" href="auth.php">Login</a>';
+                } else {
+                    $login = '<a id="login" href="logout.php">Logout</a>';
+                }
+                echo $login;
+                ?>
             </li>
         </ul>
     </div>
