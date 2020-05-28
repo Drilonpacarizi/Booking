@@ -1,8 +1,9 @@
 var checked = true;
 
 function checkLogin() {
-  // var btn = document.getElementById("logsign")
-  // btn.name = "login_user";
+  var btn = document.getElementById("logsign")
+  btn.name = "login_user";
+
   if (checked) {
     var x = document.getElementById("fullname");
     var small = document.getElementById("small");
@@ -19,8 +20,8 @@ function checkLogin() {
 }
 
 function checkSignup() {
-  // var btn = document.getElementById("logsign")
-  // btn.name = "signup";
+  var btn = document.getElementById("logsign")
+  btn.name = "signup";
   if (!checked) {
     var x = document.getElementById("fullname");
     x.required = true;
@@ -131,9 +132,9 @@ function incorrect_email_password() {
   document.getElementById("incorrect").style.color = "red";
 }
 function checkWhich() {
-  // var btn = document.getElementById("logsign")
-
-  // console.log(btn.name+"sas");
+  var btn = document.getElementById("logsign")
+  // alert(btn.name + "sas");
+  // console.log(btn.name + "sas");
   // if (!checked) {
   //   document.getElementById("myForm").action = "/login.php";
   //   logIn();
@@ -149,5 +150,5 @@ function signupSuccess() {
 }
 
 function logginSuccess() {
-  location.href = "http://localhost/booking//main.php";
+  location.href = "http://localhost/booking/main.php";
 }
