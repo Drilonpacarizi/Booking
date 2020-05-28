@@ -55,7 +55,6 @@ $obj =  new Session();
                         }
                         echo $my_booking;
                         ?> <a href="gallery.php" class="MainMenu MainMenu--MenuItem">Gallery</a>
-                        <a href="#" class="MainMenu MainMenu--MenuItem">DropDown</a>
                     </div>
                 </div>
                 <div class="col-1-of-3">

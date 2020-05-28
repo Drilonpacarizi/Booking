@@ -3,8 +3,9 @@ function user_not_login() {
 }
 
 function success_booking() {
-    alert('Ju keni shtuar me sukses');
+    alert('Booking has been added');
 }
+
 function error_booking() {
-    alert('Ju keni keni kete rezervim');
+    alert('You already have this booking');
 }

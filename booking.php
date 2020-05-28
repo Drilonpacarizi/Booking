@@ -7,10 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Document</title>
   <link rel="stylesheet" href="style/booking.css" />
+  <script src="script/main.js"></script>
 </head>
 
 <body>
-  <?php include 'header.php'; ?>
+  <?php include 'header.php';
+        include 'booking_item.php'; ?>
   <section class="section-tours" id="section-tours">
     <div class="container">
       <div class="u-center-text u-margin-bottom-big">
@@ -60,8 +62,17 @@
           $today = date('d-m-Y').'';
           $diff = date_diff(date_create($today), date_create($db_date));
           $day_number = (int)$diff->format("%R%a");
-          $final_date = $day_number>0?( $date .' till '.$new_format):('<span style="color:red;">expire</span>');
+          $final_date = $day_number>0?( $date .' till '.$new_format):('<span style="color:red;">expired</span>');
           $description = strlen($booking_arr[$i]['description'])>40?str_replace(substr($booking_arr[$i]['description'],40,strlen($booking_arr[$i]['description'])),'...',$booking_arr[$i]['description']):($booking_arr[$i]['description']);
+          $button_book = $day_number > 0 ? ('
+          <form method="post" action="booking.php">
+          <input type="hidden" name="book_id" value="' . $booking_arr[$i]['id'] . '">
+          <button name="book_now" id="book_now"class="btn btn--white">Book now!</button>
+          </form>') : '';
+          
+          
+          
+          
           echo ('
         <div class="col-1-of-3">
         <div class="card">
@@ -93,7 +104,7 @@
               ' . $price_previous .'              
                 <p class="card__price-value">$'. $booking_arr[$i]['price'] .'</p>
               </div>
-              <a href="#popup" class="btn btn--white">Book now!</a>
+              ' . $button_book . '
             </div>
           </div>
         </div>
@@ -101,11 +112,24 @@
       ');
         }
         ?>
-
-      </div>
-
-      
+      </div>  
     </div>
+    
+    <?php
+      if (isset($_POST['book_now'])) {
+        $id = $_POST['book_id'];
+        if (!isLogin() || idExpire()) {
+          echo  "<script> user_not_login();</script>";
+        } else {
+          $result = setBooking($id, getId());
+          if ($result) {
+            echo  "<script> success_booking();</script>";
+          } else {
+            echo  "<script> error_booking();</script>";
+          }
+        }
+      }
+      ?>
   </section>
 
 

@@ -102,7 +102,7 @@
           $today = date('d-m-Y') . '';
           $diff = date_diff(date_create($today), date_create($db_date));
           $day_number = (int) $diff->format("%R%a");
-          $final_date = $day_number > 0 ? ($date . ' till ' . $new_format) : ('<span style="color:red;">expire</span>');
+          $final_date = $day_number > 0 ? ($date . ' till ' . $new_format) : ('<span style="color:red;">expired</span>');
           $button_book = $day_number > 0 ? ('
           <form method="post" action="main.php">
           <input type="hidden" name="book_id" value="' . $booking_arr[$i]['id'] . '">

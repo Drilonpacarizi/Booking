@@ -1,5 +1,5 @@
 
-  <footer id="footer-section">
+  <footer id="footer-section" style>
     <div class="container">
       <div class="row">
         <div class="col-1-of-4">
@@ -26,16 +26,17 @@
 
             <div class="footer-list">
               <ul>
-                <li><a href="#">Link text here</a></li>
-                <li><a href="#">Link text here</a></li>
-                <li><a href="#">Link text here</a></li>
-                <li><a href="#">Link text here</a></li>
+                <li><a href="main.php">HOMEPAGE</a></li>
+                <li><a href="tours.php">TOURS</a></li>
+                <li><a href="booking.php">BOOKING</a></li>
+                <li><a href="mybooking.php">MY BOOKINGS</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-1-of-4">
-          <div class="footer-container">
+        <!-- <div class="col-1-of-4"> -->
+          <!-- <div class="footer-container">
             <div class="footer-header">
               <h2>Form The blog</h2>
             </div>
@@ -46,8 +47,8 @@
               aenean elit intesque sed facilispede estibulum.
             </p>
             <a href="#">Read More »</a>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
         <div class="col-1-of-4">
           <div class="footer-container">
             <div class="footer-header">
