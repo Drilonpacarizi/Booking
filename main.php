@@ -177,66 +177,7 @@
     </div>
   </section>
 
-  <section class="uts">
-    <div class="container">
-      <!-- <div class="container2"> -->
-      <div class="row">
-        <div class="col-1-of-4">
-          <a href="#" class="ut">
-            <img src="/icon/icon-group.png" alt="" />
-          </a>
-          <h3>
-            Vivamuslibero Augue
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-            perferendis vel et quis debitis delectus modi temporibus
-            laudantium officiis molestiae.
-          </p>
-        </div>
-        <div class="col-1-of-4">
-          <a href="#" class="ut">
-            <img src="/icon/icon-globe.png" alt="" />
-          </a>
-          <h3>
-            Vivamuslibero Augue
-          </h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos esse
-            magnam iusto voluptatum corrupti quisquam natus deleniti
-            architecto voluptatibus maxime?
-          </p>
-        </div>
-        <div class="col-1-of-4">
-          <a href="#" class="ut">
-            <img src="/icon/icon-cogs.png" alt="" />
-          </a>
-          <h3>
-            Vivamuslibero Augue
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-            labore dolor officia praesentium distinctio ducimus alias. Amet
-            voluptates fuga doloremque.
-          </p>
-        </div>
-        <div class="col-1-of-4">
-          <a href="#" class="ut">
-            <img src="/icon/icon-leaf.png" alt="" />
-          </a>
-          <h3>
-            Vivamuslibero Augue
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-            harum obcaecati atque minima molestias repellendus illo at
-            suscipit libero iusto!
-          </p>
-        </div>
-      </div>
-      <!-- </div> -->
-    </div>
-  </section>
+
   <?php include 'footer.php'; ?>
 </body>
 <script src="script/main.js"></script>
